@@ -1,13 +1,12 @@
 document.getElementById("msg").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting
+    event.preventDefault();
 
     // Get the input values
     var nama = document.getElementById("input-nama").value;
     var tanggalLahir = document.getElementById("input-ttl").value;
     var gender = document.querySelector('input[name="gender"]:checked').value;
     var message = document.getElementById("input-msg").value;
-
-    // Display the input values
+    
     // Perform validation
     var isValid = true;
     var validationMessage = "";
@@ -32,7 +31,6 @@ document.getElementById("msg").addEventListener("submit", function(event) {
         validationMessage += "Pesan : Pesan harus diisi.<br>";
     }
 
-    // Display the input values or show validation errors
     var result = document.getElementById("result");
     if (isValid) {
         result.innerHTML = `
@@ -46,31 +44,24 @@ document.getElementById("msg").addEventListener("submit", function(event) {
     }
 });
 
-// Define the slide duration and interval
-var slideDuration = 5000; // 5 seconds
+var slideDuration = 5000; 
 var slideInterval;
 
-// Start the slide animation
 function startSlideAnimation() {
     var slides = document.getElementsByClassName("hero-slide");
     var totalSlides = slides.length;
     var currentSlideIndex = 0;
 
     function showNextSlide() {
-        // Hide the current slide
         slides[currentSlideIndex].classList.remove("active");
 
-        // Move to the next slide
         currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
 
-        // Show the next slide
         slides[currentSlideIndex].classList.add("active");
     }
 
-    // Initially show the first slide
     slides[currentSlideIndex].classList.add("active");
 
-    // Set the interval for slide animation
     slideInterval = setInterval(showNextSlide, slideDuration);
 }
 
