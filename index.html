@@ -4,9 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <header>
+        <img src="assets/logo.jpg" alt="revoU Logo" class="logo">
+        <div class="nav-bar">
+            <div class="nav-item">Home</div>
+            <div class="nav-item">Profile</div>
+            <div class="nav-item">Portfolio</div>
+            <div class="nav-item">Message Us</div>
+        </div>
+    </header>
+    <div id="hero-section" class="hero">
+        <div class="hero-slide active">
+            <img src="../assets/banner 1.jpg" alt="Slide 1">
+        </div>
+        <div class="hero-slide">
+            <img src="../assets/banner 2.jpg" alt="Slide 2">
+        </div>
+        <div class="hero-slide">
+            <img src="../assets/banner 3.jpg" alt="Slide 3">
+        </div>
+    </div>
+    <div id="headquarters-section" class="headquarters">
+        <h1>Headquarters</h1>
+        <div class="wrapper">
+            <div class="headquarters-image-container">
+                <div class="headquarters-image" style="background-image: url('../assets/jakarta.jpg');"></div>
+                <p>Jakarta</p>
+            </div>
+            <div class="headquarters-image-container">
+                <div class="headquarters-image" style="background-image: url('../assets/bandung.jpg');"></div>
+                <p>Bandung</p>
+            </div>
+            <div class="headquarters-image-container">
+                <div class="headquarters-image" style="background-image: url('../assets/surabaya.jpg');"></div>
+                <p>Surabaya</p>
+            </div>
+        </div>
+    </div>
+    <div id="message-us-section" class="message-us">
+        <form id="msg" enctype="multipart/form-data" method="post">
+            <h1>Message Us</h1>
+            <div class="table">
+                <table class="table-x" width="500px">
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td>
+                        <td width="10%">
+                            <input id="input-nama" type="text" name="nama" style="width: 350px;" autocomplete="off"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir</td>
+                        <td>:</td>
+                        <td width="10%">
+                            <input id="input-ttl" type="date" name="tanggal-lahir" style="width: 350px;" autocomplete="off"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td>:</td>
+                        <td width="10%">
+                            <input type="radio" name="gender" value="laki-laki">Laki-Laki</input>
+                            <input type="radio" name="gender" value="perempuan">Perempuan</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Message Us</td>
+                        <td>:</td>
+                        <td width="10%">
+                            <textarea id="input-msg" name="pesan" autocomplete="off"></textarea>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" value="Kirim" class="kirim" onclick="myFunction()"></input>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <div id="result" class="output"></div> 
+    </div>
+    <footer>Created by Beauty</footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
